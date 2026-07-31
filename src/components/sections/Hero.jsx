@@ -28,7 +28,7 @@ const Hero = () => {
         </div>
         <div className="hero-image fade-in fade-in-delay-2">
           <img 
-            src="https://image.qwenlm.ai/public_source/a1b4e549-ed72-4014-9407-ec98b0244fe6/1d04d7cbd-9368-47b2-97f0-426fb68235dc.png" 
+            src="https://sun9-47.vkuserphoto.ru/s/v1/ig2/c0yBAWB8NQ02vdVaeoSm4MCFSvbtfXWa59jUn9Kp6G58Ep-c9011V1IjZLeSZ_OKEBb4CjKz1D390ChJZSmGUeAq.jpg?quality=95&as=32x21,48x32,72x48,108x72,160x107,240x160,360x240,480x320,540x360,640x427,720x480,1080x720,1280x853,1440x960,2560x1707&from=bu&u=n2lE8tH0Lcoi0DAeOXQkNTenM_4RfDkLuJmGfOYvkik&cs=2560x0" 
             alt="Георгий Фомкин"
             loading="lazy"
           />

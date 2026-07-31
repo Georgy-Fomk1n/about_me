@@ -6,12 +6,12 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './src/components'),
-      '@data': resolve(__dirname, './src/data'),
-      '@styles': resolve(__dirname, './src/styles'),
-      '@utils': resolve(__dirname, './src/utils'),
-      '@pages': resolve(__dirname, './src/pages'),
+      '@': resolve(import.meta.dirname, './src'),
+      '@components': resolve(import.meta.dirname, './src/components'),
+      '@data': resolve(import.meta.dirname, './src/data'),
+      '@styles': resolve(import.meta.dirname, './src/styles'),
+      '@utils': resolve(import.meta.dirname, './src/utils'),
+      '@pages': resolve(import.meta.dirname, './src/pages'),
     }
   },
   build: {

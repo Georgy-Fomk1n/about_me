@@ -28,7 +28,7 @@ const Header = () => {
     <header className="header">
       <div className="header-inner">
         <Link to="/" className="logo" onClick={close}>
-          Г<span>.</span>Фомкин
+          Георгий <span>Фомкин</span>
         </Link>
         
         <nav className={`nav ${isMobile ? 'mobile' : ''} ${isOpen ? 'open' : ''}`}>

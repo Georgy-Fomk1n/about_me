@@ -1,8 +1,10 @@
+// Badge.jsx
 import React from 'react';
 
-const Badge = ({ children, className = '' }) => {
+const Badge = ({ children, icon: Icon, className = '' }) => {
   return (
     <span className={`badge ${className}`}>
+      {Icon && <Icon className="badge-icon" />}
       {children}
     </span>
   );

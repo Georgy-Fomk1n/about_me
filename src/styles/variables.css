@@ -1,0 +1,25 @@
+:root {
+    --bg-primary: #F5F5F4;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary: #EDEDED;
+    --bg-graphite: #1A1A1A;
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --card-border: rgba(0, 0, 0, 0.06);
+    --card-hover: rgba(255, 255, 255, 0.95);
+    --text-primary: #0A0A0A;
+    --text-secondary: #4A4A4A;
+    --text-muted: #8A8A8A;
+    --accent-red: #BE1E2D;
+    --accent-red-hover: #9E1825;
+    --accent-red-soft: rgba(190, 30, 45, 0.08);
+    --accent-blue: #1E5AA8;
+    --accent-blue-hover: #174A8F;
+    --accent-blue-soft: rgba(30, 90, 168, 0.08);
+    --pill-bg: rgba(0, 0, 0, 0.06);
+    --pill-hover: rgba(0, 0, 0, 0.04);
+    --radius: 20px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.08);
+}

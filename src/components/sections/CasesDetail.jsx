@@ -2,6 +2,23 @@ import React from 'react';
 import cases from '@data/cases.json';
 
 const CasesDetail = () => {
+  if (cases.cases.length === 0) {
+    return (
+      <div className="fade-in" style={{ textAlign: 'center', padding: '80px 20px', color: 'var(--text-muted)' }}>
+        <div style={{ fontSize: '64px', marginBottom: '24px' }}>🚧</div>
+        <h3 style={{ fontSize: '24px', color: 'var(--text-primary)', marginBottom: '16px' }}>Кейсы скоро появятся</h3>
+        <p style={{ fontSize: '18px', color: 'var(--text-secondary)', maxWidth: '600px', margin: '0 auto', lineHeight: '1.6' }}>
+          В данный момент я работаю над интересными проектами. Скоро здесь появятся подробные описания реализованных кейсов с детальным разбором проблем, подходов и результатов.
+        </p>
+        <div style={{ marginTop: '32px' }}>
+          <a href="/contact" className="btn-primary">
+            Обсудить проект
+          </a>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="cases-list">
       {cases.cases.map((caseItem, index) => (

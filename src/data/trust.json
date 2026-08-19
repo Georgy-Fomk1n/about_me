@@ -1,10 +1,15 @@
 {
   "trustLogos": [
-    "Глори.Цифра",
-    "Колледж информатики и программирования",
-    "Профессионалы",
-    "Молодёжная палата Москвы",
-    "Технологические партнёры"
+    {
+      "name": "Глори.Цифра",
+      "logo": "https://xn--c1akimk.digital/logo-mark-light.svg",
+      "website": "https://xn--c1akimk.digital"
+    },
+    {
+      "name": "Молодёжная палата района Западное Дегунино",
+      "logo": "https://sun9-35.vkuserphoto.ru/s/v1/ig2/jADuLtfmRPN2A1UFOdavWR3r8iPoUhWDeC7uzW9k64E3_xMV_iddFj4J8LWMvSusJCOeGXEso2EhOo9732aQgiEK.jpg?quality=95&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640,720x720,1024x1024&from=bu&u=AoB29b-3gS8sqv2BxD01E-YXmTmLqC0sxlLAJAn7P3M&cs=1024x0",
+      "website": "https://zap-degunino.mos.ru/about/junior-chamber/"
+    }
   ],
   "scenarios": [
     "Разработка цифрового продукта",

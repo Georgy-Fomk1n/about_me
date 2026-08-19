@@ -12,7 +12,7 @@ import '@styles/main.css';
 function App() {
   return (
     <HelmetProvider>
-      <Router>
+      <Router basename="/about_me">
         <div className="app">
           <Header />
           <main>

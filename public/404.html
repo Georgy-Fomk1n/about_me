@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Перенаправление</title>
+    <script>
+        // SPA routing fallback - redirect to app with current path
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+        
+        // If not already on the about_me path, redirect
+        if (!path.startsWith('/about_me/')) {
+            window.location.href = '/about_me/' + path.replace(/^\//, '') + search + hash;
+        } else {
+            // Already on about_me path, redirect to root
+            window.location.href = '/about_me/';
+        }
+    </script>
+</head>
+<body>
+    <p>Перенаправление...</p>
+</body>
+</html>

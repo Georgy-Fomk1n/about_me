@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fomkin.ru/sitemap.xml
+Sitemap: https://georgy-fomk1n.github.io/about_me/sitemap.xml
 
 # Disallow specific paths if needed
 # Disallow: /private/

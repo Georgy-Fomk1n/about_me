@@ -55,28 +55,6 @@ const ContactContent = () => {
           ))}
         </ul>
       </div>
-
-      {/* GitHub */}
-      <a href={config.social.github} className="bento-card" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div className="bento-icon">⚙️</div>
-          <div className="bento-label">GitHub</div>
-          <div className="bento-title">Открытый код</div>
-          <div className="bento-desc">Мои проекты</div>
-        </div>
-        <div className="bento-arrow">→</div>
-      </a>
-
-      {/* LinkedIn */}
-      <a href={config.social.linkedin} className="bento-card" target="_blank" rel="noopener noreferrer">
-        <div>
-          <div className="bento-icon">💼</div>
-          <div className="bento-label">LinkedIn</div>
-          <div className="bento-title">Профессиональный профиль</div>
-          <div className="bento-desc">Нетворкинг</div>
-        </div>
-        <div className="bento-arrow">→</div>
-      </a>
     </div>
   );
 };

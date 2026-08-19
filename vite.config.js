@@ -20,10 +20,16 @@ export default defineConfig({
     sourcemap: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router-vendor': ['react-router-dom'],
-          'seo-vendor': ['react-helmet-async']
+        manualChunks: (id) => {
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+            return 'react-vendor'
+          }
+          if (id.includes('node_modules/react-router')) {
+            return 'router-vendor'
+          }
+          if (id.includes('node_modules/react-helmet-async')) {
+            return 'seo-vendor'
+          }
         }
       }
     }

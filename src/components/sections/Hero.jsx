@@ -29,7 +29,7 @@ const Hero = () => {
         </div>
         <div className="hero-image fade-in fade-in-delay-2">
           <img
-            src="https://sun9-36.vkuserphoto.ru/s/v1/ig2/2oW0oOs1iKEWogIRRLvfUKRA2K6GNCogVBkzsAZccORLra3og_SAa08za7z4NgOHCqzVTUTHAULzNsV1lS64DeLI.jpg?quality=95&as=32x43,48x64,72x96,108x144,160x213,240x320,360x480,480x640,540x720,640x853,720x960,1080x1440,1280x1707,1440x1920,1920x2560&from=bu&cs=1920x0"
+            src="/c0yBAWB8NQ02vdVaeoSm4MCFSvbtfXWa59jUn9Kp6G58Ep-c9011V1IjZLeSZ_OKEBb4CjKz1D390ChJZSmGUeAq.jpg"
             alt="Георгий Фомкин"
             loading="lazy"
           />

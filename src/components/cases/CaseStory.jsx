@@ -186,7 +186,7 @@ const CaseStory = ({ caseItem, prev, next }) => {
       ))}
 
       {caseItem.law && (
-        <Scene number={++lastNumber} eyebrow="Опора" title="На что мы опирались">
+        <Scene number={++lastNumber} eyebrow="Опора" title={caseItem.voice === 'i' ? 'На что я опирался' : 'На что мы опирались'}>
           <div className="story-laws">
             {caseItem.law.map((law) => (
               <div key={law.name} className="story-law">
@@ -216,7 +216,7 @@ const CaseStory = ({ caseItem, prev, next }) => {
       </Scene>
 
       <div className="story-takeaway fade-in">
-        <span className="story-takeaway-label">Что мы из этого вынесли</span>
+        <span className="story-takeaway-label">{caseItem.voice === 'i' ? 'Что я из этого вынес' : 'Что мы из этого вынесли'}</span>
         <p>{caseItem.takeaway}</p>
       </div>
 

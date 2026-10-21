@@ -693,3 +693,31 @@
 .story-related + .story-nav {
     margin-top: 48px;
 }
+
+/* Document pages (appeals and replies) */
+.story-figures-docs {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+.story-figure-doc a {
+    display: block;
+    border-radius: 12px;
+}
+
+.story-figure-doc a:focus-visible {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+.story-figure-doc img {
+    aspect-ratio: auto;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.story-figure-doc a:hover img {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}

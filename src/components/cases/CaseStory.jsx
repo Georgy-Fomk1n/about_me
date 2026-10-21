@@ -43,10 +43,16 @@ const SceneBody = ({ scene }) => (
     <Paragraphs items={scene.paragraphs} />
 
     {scene.figures && (
-      <div className="story-figures">
+      <div className={`story-figures${scene.figures.some((f) => f.doc) ? ' story-figures-docs' : ''}`}>
         {scene.figures.map((figure) => (
-          <figure key={figure.src} className="story-figure">
-            <img src={assetUrl(figure.src)} alt={figure.alt} loading="lazy" />
+          <figure key={figure.src} className={`story-figure${figure.doc ? ' story-figure-doc' : ''}`}>
+            {figure.doc ? (
+              <a href={assetUrl(figure.src)} target="_blank" rel="noopener noreferrer">
+                <img src={assetUrl(figure.src)} alt={figure.alt} loading="lazy" />
+              </a>
+            ) : (
+              <img src={assetUrl(figure.src)} alt={figure.alt} loading="lazy" />
+            )}
             <figcaption>{figure.caption}</figcaption>
           </figure>
         ))}
@@ -180,7 +186,7 @@ const CaseStory = ({ caseItem, prev, next }) => {
       ))}
 
       {caseItem.law && (
-        <Scene number={++lastNumber} eyebrow="Опора" title="На что я опирался">
+        <Scene number={++lastNumber} eyebrow="Опора" title="На что мы опирались">
           <div className="story-laws">
             {caseItem.law.map((law) => (
               <div key={law.name} className="story-law">
@@ -210,7 +216,7 @@ const CaseStory = ({ caseItem, prev, next }) => {
       </Scene>
 
       <div className="story-takeaway fade-in">
-        <span className="story-takeaway-label">Что я из этого вынес</span>
+        <span className="story-takeaway-label">Что мы из этого вынесли</span>
         <p>{caseItem.takeaway}</p>
       </div>
 

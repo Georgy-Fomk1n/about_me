@@ -15,7 +15,7 @@ const ContactContent = () => {
           <div className="bento-icon">💬</div>
           <div className="bento-label">Начать диалог</div>
           <div className="bento-title">Расскажите о вашей задаче</div>
-          <div className="bento-desc">Обсудим ваш проект, предложу подход и оценю возможности сотрудничества. Отвечаю в течение дня.</div>
+          <div className="bento-desc">Обсудим ваш проект, предложим подход и оценим возможности сотрудничества. Отвечаем в течение дня.</div>
         </div>
         <div className="bento-arrow">→</div>
       </a>

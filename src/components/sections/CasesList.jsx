@@ -39,7 +39,7 @@ const CasesList = () => {
       </div>
 
       <div className="cases-method fade-in">
-        <h3>Как я пишу обращения</h3>
+        <h3>Как мы пишем обращения</h3>
         <div className="work-steps">
           {cases.intro.method.map((step, index) => (
             <div key={step.title} className="work-step">

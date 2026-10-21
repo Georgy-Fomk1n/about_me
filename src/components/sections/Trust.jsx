@@ -5,7 +5,7 @@ const Trust = () => {
   return (
     <section className="trust-section">
       <div className="section-header fade-in">
-        <h2>Мне доверяют и со мной сотрудничают</h2>
+        <h2>Нам доверяют и с нами сотрудничают</h2>
       </div>
       <div className="trust-logos fade-in fade-in-delay-1">
         {trust.trustLogos.map((partner, index) => (

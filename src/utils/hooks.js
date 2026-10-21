@@ -26,6 +26,36 @@ export const useScrollAnimation = () => {
   }, []);
 };
 
+// Hook for reading progress bar: scales the referenced element from 0 to 1
+export const useReadingProgress = (barRef) => {
+  useEffect(() => {
+    let frame = 0;
+
+    const update = () => {
+      frame = 0;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = max > 0 ? Math.min(1, window.scrollY / max) : 0;
+      if (barRef.current) {
+        barRef.current.style.transform = `scaleX(${progress})`;
+      }
+    };
+
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+
+    update();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+
+    return () => {
+      if (frame) cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, [barRef]);
+};
+
 // Hook for header scroll effect
 export const useHeaderScroll = () => {
   useEffect(() => {

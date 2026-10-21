@@ -12,6 +12,9 @@ const Header = () => {
     close();
   }, [location.pathname, close]);
 
+  const isActive = (path) =>
+    path === '/' ? location.pathname === '/' : location.pathname.startsWith(path);
+
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -36,7 +39,7 @@ const Header = () => {
             <Link
               key={item.id}
               to={item.path}
-              className={`nav-link ${location.pathname === item.path ? 'active' : ''}`}
+              className={`nav-link ${isActive(item.path) ? 'active' : ''}`}
               onClick={close}
             >
               {item.label}

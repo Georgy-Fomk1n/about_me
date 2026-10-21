@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Перенаправление</title>
     <script>
-        // SPA routing fallback - redirect to app with current path
-        var path = window.location.pathname;
-        var search = window.location.search;
-        var hash = window.location.hash;
-        
-        // If not already on the about_me path, redirect
-        if (!path.startsWith('/about_me/')) {
-            window.location.href = '/about_me/' + path.replace(/^\//, '') + search + hash;
-        } else {
-            // Already on about_me path, redirect to root
-            window.location.href = '/about_me/';
-        }
+        // SPA routing fallback for GitHub Pages: pass the requested path to
+        // index.html as ?/path, where it is restored before the router starts.
+        var pathSegmentsToKeep = 1;
+        var l = window.location;
+        l.replace(
+            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+            l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+            l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+            l.hash
+        );
     </script>
 </head>
 <body>

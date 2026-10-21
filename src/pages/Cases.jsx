@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import CasesDetail from '@components/sections/CasesDetail';
+import CasesList from '@components/sections/CasesList';
+import cases from '@data/cases.json';
 import { useScrollAnimation } from '@utils/hooks';
 import SEO from '@utils/seo';
 
@@ -12,18 +13,18 @@ const Cases = () => {
 
   return (
     <>
-      <SEO 
+      <SEO
         title="Кейсы"
-        description="Каждый проект — это история мышления, подхода и результата. Посмотрите мои реализованные проекты в цифровой разработке, предпринимательстве и городских инициативах."
+        description={cases.intro.lead}
         path="/cases"
       />
       <div className="page active">
         <section style={{ paddingTop: '140px' }}>
           <div className="section-header fade-in">
-            <h2>Кейсы</h2>
-            <p>Каждый проект — это история мышления, подхода и результата</p>
+            <h2>{cases.intro.title}</h2>
+            <p>{cases.intro.lead}</p>
           </div>
-          <CasesDetail />
+          <CasesList />
         </section>
       </div>
     </>

@@ -1,42 +1,39 @@
-const CACHE_NAME = 'fomkin-v1';
-const urlsToCache = [
-  '/',
-  '/cases',
-  '/about',
-  '/contact',
-  '/manifest.json'
-];
+// Network-first service worker: the site changes often, so a fresh page always
+// wins and the cache is only a fallback for offline visits.
+const CACHE_NAME = 'fomkin-v2';
+const BASE = new URL('./', self.location).pathname;
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
+    caches.open(CACHE_NAME).then((cache) => cache.add(BASE)).then(() => self.skipWaiting())
   );
 });
 
 self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  if (request.method !== 'GET' || new URL(request.url).origin !== self.location.origin) {
+    return;
+  }
+
   event.respondWith(
-    caches.match(event.request)
+    fetch(request)
       .then((response) => {
-        if (response) {
-          return response;
+        if (response.ok) {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
         }
-        return fetch(event.request);
+        return response;
       })
+      .catch(() =>
+        caches.match(request).then((cached) => cached || caches.match(BASE))
+      )
   );
 });
 
 self.addEventListener('activate', (event) => {
-  const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
+    caches.keys()
+      .then((names) => Promise.all(names.filter((name) => name !== CACHE_NAME).map((name) => caches.delete(name))))
+      .then(() => self.clients.claim())
   );
 });

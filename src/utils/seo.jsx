@@ -4,8 +4,8 @@ import config from '@data/config.json';
 export const SEO = ({ title, description, image, type = 'website', path = '' }) => {
   const siteTitle = title ? `${title} | ${config.site.title}` : config.site.title;
   const siteDescription = description || config.site.description;
-  const siteImage = image || `${config.site.url}/og-image.jpg`;
-  const siteUrl = `${config.site.url}${path}`;
+  const siteImage = image || `${config.site.url}og-image.jpg`;
+  const siteUrl = `${config.site.url}${path.replace(/^\//, '')}`;
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -13,11 +13,7 @@ export const SEO = ({ title, description, image, type = 'website', path = '' }) 
     name: 'Георгий Фомкин',
     jobTitle: 'Предприниматель и архитектор цифровых продуктов',
     url: config.site.url,
-    sameAs: [
-      config.social.telegram,
-      config.social.github,
-      config.social.linkedin
-    ],
+    sameAs: [config.social.telegram].filter(Boolean),
     worksFor: {
       '@type': 'Organization',
       name: config.company.name,

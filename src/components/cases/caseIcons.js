@@ -1,7 +1,7 @@
 import {
   Lightbulb, Landmark, Goal, Footprints, Signpost, MailQuestion,
   HardHat, BusFront, Bus, TrafficCone, Bike, ChartNoAxesCombined, Users,
-  Trophy, Globe, LayoutDashboard, BookOpenText, Vote
+  Trophy, Globe, CircleParking, Construction, TreeDeciduous, LayoutDashboard, BookOpenText, Vote
 } from 'lucide-react';
 
 const caseIcons = {
@@ -22,7 +22,10 @@ const caseIcons = {
   Globe,
   LayoutDashboard,
   BookOpenText,
-  Vote
+  Vote,
+  CircleParking,
+  Construction,
+  TreeDeciduous
 };
 
 export default caseIcons;

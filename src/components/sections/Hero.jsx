@@ -29,7 +29,7 @@ const Hero = () => {
         </div>
         <div className="hero-image fade-in fade-in-delay-2">
           <img
-            src="public/hero.jpg"
+            src={`${import.meta.env.BASE_URL}hero.jpg`}
             alt="Георгий Фомкин"
             loading="lazy"
           />

@@ -23,13 +23,13 @@ const Hero = () => {
           </p>
           <div className="fade-in fade-in-delay-3">
             <Link to="/contact" className="btn-primary">
-              Связаться с нами
+              Связаться со мной
             </Link>
           </div>
         </div>
         <div className="hero-image fade-in fade-in-delay-2">
           <img
-            src="/c0yBAWB8NQ02vdVaeoSm4MCFSvbtfXWa59jUn9Kp6G58Ep-c9011V1IjZLeSZ_OKEBb4CjKz1D390ChJZSmGUeAq.jpg"
+            src="public/hero.jpg"
             alt="Георгий Фомкин"
             loading="lazy"
           />

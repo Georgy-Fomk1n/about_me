@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Hero from '@components/sections/Hero';
 import Services from '@components/sections/Services';
 import Cases from '@components/sections/Cases';
+import PhotoStrip from '@components/sections/PhotoStrip';
 import Trust from '@components/sections/Trust';
 import FinalCTA from '@components/sections/FinalCTA';
 import { useScrollAnimation } from '@utils/hooks';
@@ -21,6 +22,7 @@ const Home = () => {
         <Hero />
         <Services />
         <Cases />
+        <PhotoStrip />
         <Trust />
         <FinalCTA />
       </div>

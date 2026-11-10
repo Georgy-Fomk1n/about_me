@@ -13,7 +13,7 @@ export const SEO = ({ title, description, image, type = 'website', path = '' }) 
     name: 'Георгий Фомкин',
     jobTitle: 'Предприниматель и архитектор цифровых продуктов',
     url: config.site.url,
-    sameAs: [config.social.telegram].filter(Boolean),
+    sameAs: [config.social.telegram, config.social.vk].filter(Boolean),
     worksFor: {
       '@type': 'Organization',
       name: config.company.name,

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import PhotoStrip from '@components/sections/PhotoStrip';
 import AboutContent from '@components/sections/AboutContent';
 import { useScrollAnimation } from '@utils/hooks';
 import SEO from '@utils/seo';
@@ -22,7 +21,6 @@ const About = () => {
         <section style={{ paddingTop: '140px' }}>
           <AboutContent />
         </section>
-        <PhotoStrip />
       </div>
     </>
   );

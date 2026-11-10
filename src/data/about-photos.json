@@ -1,0 +1,84 @@
+{
+  "hero": {
+    "src": "images/about/portrait.jpg",
+    "caption": "Георгий Фомкин"
+  },
+  "college": [
+    {
+      "src": "images/about/meeting.jpg",
+      "caption": "На собрании Студенческого совета колледжа"
+    },
+    {
+      "src": "images/about/profka.jpg",
+      "caption": "Проект «Профка»: рассказываем школьникам о колледже"
+    }
+  ],
+  "transport": [
+    {
+      "src": "images/about/buses-65.jpg",
+      "caption": "Автобусы особо большого класса на 65 маршруте, ради которых мы добивались перемен"
+    },
+    {
+      "src": "images/about/bus-morning.jpg",
+      "caption": "Утренний автобус-«гармошка» везёт студентов к первой паре"
+    }
+  ],
+  "today": [
+    {
+      "src": "images/about/debate.jpg",
+      "caption": "Конкурс дебатов «Мастер слова САО»"
+    },
+    {
+      "src": "images/about/busino.jpg",
+      "caption": "Обход микрорайона Бусиново с главой управы"
+    }
+  ],
+  "hobby": [
+    {
+      "src": "images/about/sunset.jpg",
+      "caption": "Фотография: закат над городом"
+    },
+    {
+      "src": "images/about/vladimir.jpg",
+      "caption": "Поездка во Владимир, сентябрь 2026"
+    }
+  ],
+  "city": [
+    {
+      "src": "images/about/mzhk.jpg",
+      "caption": "МЖК в Зеленограде: образец микрорайона, где зелень и дворы продуманы"
+    },
+    {
+      "src": "images/about/tram-cab.jpg",
+      "caption": "Кабина беспилотного трамвая на экскурсии от Дептранса, сентябрь 2024"
+    },
+    {
+      "src": "images/about/electrobus.jpg",
+      "caption": "Электробус КАМАЗ на московских улицах"
+    }
+  ],
+  "business": [
+    {
+      "src": "images/about/parus.jpg",
+      "caption": "Новый цифровой контур клуба «Парус»: проект «Глори.Цифра»"
+    },
+    {
+      "src": "images/about/kaluga.jpg",
+      "caption": "Защита проекта на финале «Профессионалов» по компетенции «Технологическое предпринимательство»"
+    },
+    {
+      "src": "images/about/lecture.jpg",
+      "caption": "Лекция в колледже о том, как технологии становятся системой для бизнеса"
+    }
+  ],
+  "civic": [
+    {
+      "src": "images/about/snow.jpg",
+      "caption": "Уборка снега с Молодёжной палатой"
+    },
+    {
+      "src": "images/about/board.jpg",
+      "caption": "Испорченная информационная доска у МЦД «Моссельмаш» (испортили не мы: мы обратились, чтобы доску помыли, потому что никому до неё не было дела)"
+    }
+  ]
+}

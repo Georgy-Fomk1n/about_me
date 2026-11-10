@@ -298,8 +298,15 @@ section {
 }
 
 .competency-icon {
-    font-size: 24px;
-    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    background: var(--accent-red-soft);
+    color: var(--accent-red);
 }
 
 .competency h4 {
@@ -311,7 +318,7 @@ section {
 
 .competency p {
     font-size: 13px;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     line-height: 1.5;
 }
 

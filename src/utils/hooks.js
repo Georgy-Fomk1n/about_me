@@ -59,8 +59,6 @@ export const useReadingProgress = (barRef) => {
 // Hook for header scroll effect
 export const useHeaderScroll = () => {
   useEffect(() => {
-    let lastScroll = 0;
-    
     const handleScroll = () => {
       const header = document.querySelector('.header');
       const currentScroll = window.pageYOffset;
@@ -70,8 +68,6 @@ export const useHeaderScroll = () => {
       } else {
         header.classList.remove('scrolled');
       }
-
-      lastScroll = currentScroll;
     };
 
     window.addEventListener('scroll', handleScroll);

@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Badge from '@components/ui/Badge';
 import { FaMapMarkerAlt, FaBriefcase, FaCode, FaStar } from 'react-icons/fa';
-import services from '@data/services.json';
 
 const Hero = () => {
   return (
